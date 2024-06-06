@@ -13,7 +13,7 @@ bspc config borderless_monocle     true
 bspc config gapless_monocle        true
 bspc config single_monocle         true
 
-bspc config focused_border_color '#82AAFF'
+bspc config focused_border_color '#7e7e7e'
 
 sleep 1
 
@@ -21,15 +21,15 @@ bspc rule -a Peek                    state=floating
 bspc rule -a Xpra-GUI                state=floating
 bspc rule -a Xpra-Launcher-GUI       state=floating
 bspc rule -a Alacritty               desktop='1'
-bspc rule -a 'zoom'                  desktop='2' state='floating'
-bspc rule -a firefoxdeveloperedition desktop='3'
+bspc rule -a zoom                    desktop='2' state='floating'
+bspc rule -a Google-chrome           desktop='3'
 
 pgrep -x alacritty > /dev/null || alacritty &
-pgrep -x firefox > /dev/null || firefox-developer-edition &
+pgrep -x chrome > /dev/null || google-chrome-stable &
 # pgrep -x kdeconnect-indi > /dev/null || kdeconnect-indicator &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 sleep 5
 
-bspc rule -r firefoxdeveloperedition
+bspc rule -r Google-chrome
 bspc rule -r Alacritty

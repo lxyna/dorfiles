@@ -55,10 +55,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = calibri:pixelsize=12;3
+font-0 = calibri:pixelsize=15;3
 font-2 = Twemoji:scale=7;3
-font-1 = battery:size=9;3
-font-3 = Font Awesome 6 Free Solid:size=9;3
+font-1 = battery:size=12;3
+font-3 = Font Awesome 6 Free Solid:size=12;3
 
 modules-left = bspwm polywins label
 #modules-center = polywins-rs
@@ -197,7 +197,7 @@ ramp-signal-foreground = #666
 
 [module/down]
 type = internal/network
-interface = wlp170s0
+interface = wlan0
 interval = 3
 
 format-connected-prefix = "  "
@@ -206,7 +206,7 @@ label-connected = %downspeed%
 
 [module/up]
 type = internal/network
-interface = wlp170s0
+interface = wlan0
 interval = 3
 
 format-connected-prefix = "  "
@@ -252,11 +252,15 @@ type = internal/battery
 battery = BAT1
 adapter = ACAD
 
+low-at = 20
+
 label-charging = %percentage%%
+label-low = %percentage%%
 
 format-charging = %{A1:~/scripts/toggletheme.sh:}%{F#2b2f3b}<animation-charging>%{F-}  <label-charging>%{A}
 format-discharging = %{A1:~/scripts/toggletheme.sh:}%{F#2b2f3b}<ramp-capacity>%{F-}  <label-discharging>%{A}
 format-full = %{A1:~/scripts/toggletheme.sh:}%{F#2b2f3b}<ramp-capacity>%{F-}  <label-full>%{A}
+format-low = %{A1:~/scripts/toggletheme.sh:}%{F#ff0000}<ramp-capacity>  <label-low>%{F-}%{A}
 
 ramp-capacity-0 = ""
 ramp-capacity-1 = ""

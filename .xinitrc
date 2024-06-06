@@ -1,6 +1,9 @@
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
-export WINIT_X11_SCALE_FACTOR=1.5
+export WINIT_X11_SCALE_FACTOR=1.25
+export GDK_DPI_SCALE=1.25
+export QT_SCALE_FACTOR=1.25
+
 export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORMTHEME=qt5ct
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
@@ -11,7 +14,7 @@ xsetroot -cursor_name left_ptr
 setxkbmap -option caps:super
 # xbindkeys
 if [ "$(xfconf-query -c xsettings -p /Net/ThemeName)" = "Matcha-dark-azul" ]; then
-  hsetroot -solid '#020e1d'
+  hsetroot -solid '#252525'
 else
   hsetroot -solid '#ebedef'
 fi

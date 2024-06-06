@@ -21,11 +21,11 @@
 @define-color item_name #ddd;
 @define-color item_text #999;
 @define-color item_box_selected #2b2e34;
-@define-color item_text_selected #99ccff;
+@define-color item_text_selected #797979;
 @define-color item_name_selected #eee;
 @define-color item_shortcut_color #777;
 @define-color item_shortcut_shadow darker(@bg_color);
-@define-color item_shortcut_color_sel #99ccff;
+@define-color item_shortcut_color_sel #797979;
 @define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {
